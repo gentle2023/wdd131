@@ -1,199 +1,162 @@
-/* Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+:root {
+    --primary-color: #084C61;
+    --secondary-color: #242424;
+    --font-color: #333;
+    --background-color: #f1f1f1;
+    --nav-bg: var(--secondary-color);
+    --header-span-color: var(--primary-color);
+}
 
-/* Base styles */
+
+
 * {
-    box-sizing: border-box;
-}
-
-body {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+body {
     font-family: 'Roboto', sans-serif;
-    background-color: #f2f2f2;
-    color: #222;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+}
+h1, h2, h3 {
+    margin-bottom: 15px;
+    color: #444;
 }
 
-/* Header */
 header {
-    display: block;
-    background-color: #1f4e79;
+    background-color: var(--header-span-color);
     color: white;
     text-align: center;
-
 }
 
 #course-title {
-    display: block;
-    font-size: 1.6rem;
-    font-weight: 700;
-    padding: 20px;
-    
+   display: block;
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
-/* Navigation (Flexbox) */
 nav {
-    display: flex;
-    background-color: #333;
-    
-     margin: 0 auto;
-    padding-bottom: 24px 0 24px 0;  
-     
-} 
-
-nav ul {
-    list-style-type: none;
-         
+	background-color: var(--secondary-color);
+	margin: 0 auto;
+	width: 980px;
 }
-
+nav ul {
+	list-style-type: none;
+}
 nav a {
-    color: white;
-    text-decoration: none;
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
-    font-weight: 500;
-    transition: background-color 0.3s ease;
+	display: block;
+	color: #fff;
+	text-align: center;
+	padding: 1rem;
+	text-decoration: none;
 }
 
 nav a:hover {
-    background-color: #1f4e79;
-    border-radius: 4px;
-
+	background-color: orange;
 }
 
-/* Main layout */
-main {
-    max-width: 1200px;
-    margin: 1px auto;
-    padding: 1rem;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 1.5rem;
+.active {
+	color: orange;
+}
+
+@media (min-width: 640px) {
+	nav ul {
+		display: flex;
+	}
+
+	nav ul li {
+		flex: 1 0 auto; 
+}
+}
+
+header, main, footer {
+    width: 980px;
+    margin: 0 auto;
 }
 
 main h1 {
-    grid-column: 1 / -1;
     text-align: center;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
+ .profile_picture {
+    width: 200px;
+    border: 2px solid #777;
+    background-color: #242424;
+    margin-left: 0.7rem;
+    margin-right: 1rem;
+ }
 
 /* Cards */
+.cards {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
+}
+
 .card {
     background-color: white;
-    padding: 1.25rem;
-    border-radius: 6px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.card h3 {
-    background-color: #1f4e79;
-    color: white;
-    padding: 0.5rem;
-    margin: -1.25rem -1.25rem 1rem;
-    border-radius: 6px 6px 0 0;
-    text-align: center;
-}
-
-/* About content */
-.about-content {
-    display: flex;
-    gap: 1rem;
-    align-items: flex-start;
-    
-}
-
-.about-content img {
-    width: 150px;
-    height: auto;
-    border-radius: 4px;
-    border: 2px solid #ccc;
-    box-shadow: 0 0 30px gray;
-    
-    
-}
-
-/* Location section */
-.location-content {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-    margin-top: 1rem;
-}
-
-.location-content img {
-    width: 120px;
+    border-radius: 8px;
+    overflow: hidden;
     border: 1px solid #ccc;
 }
 
-.location-content p {
-    text-align: start;
-    
-    
-    
-}
-.country-name  {
-    font-weight: 600;
-    font-size: 1.1rem;
-    padding-left:150px;
-    border-bottom: 1px solid gray;  
+.card h2 {
+    background-color: #1f4e79;
+    color: white;
+    padding: 0.75rem;
+    text-align: center;
 }
 
-/* .flag-img {
-  display: block;
-  width: 250px;   
-  margin: auto;
-} 
-
-.flag-caption {
-  text-align: left;
-  margin-top: 6px;
-  font-size: 0.9rem;
-  color: #555;
-  font-style: italic;
-} */
-
-.flag {
-  text-align: center;
-  margin: 20px auto;
+.card-content {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
 }
 
-.flag img {
-  width: 150px; /* adjust as needed */
+.card-content img {
+    width: 120px;
+    border-radius: 4px;
 }
 
-.flag figcaption {
-  margin-top: 8px;
-  font-size: 0.9rem;
-  color: #555;
-  font-style: italic;
-  
+.card h3 {
+    text-align: center;
+    margin-top: 1rem;
 }
 
+.location {
+    display: flex;
+    gap: 0.6rem;
+    padding: 0.7rem;
+}
 
-/* Resource list */
+.location img {
+    width: 160px;
+    align-self: center;
+}
+
+/* Resources */
 .card ul {
-   padding: 100px 0 0 20px;
-    
-   
-    
+    list-style: disc;
+    padding: 1.5rem;
+    margin-left: 1rem;
 }
+
 .card li {
-    margin: 0.5rem 0;
+    margin-bottom: 0.5rem;
 }
 
 .card a {
     color: #1f4e79;
-    font-weight: 500;
 }
 
 footer {
     background-color: #1f4e79;
     color: white;
     text-align: center;
-    padding: 0.5rem;
-    font-size: 0.9rem;
-}
-#lastModified {
-    font-size: 0.8rem;
-    color: #84ec96;
+    padding: 1rem;
+    margin-top: 2rem;
 }
