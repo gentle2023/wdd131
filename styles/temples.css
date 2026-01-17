@@ -61,6 +61,7 @@ nav ul {
     list-style: none;
     gap: 1rem;
     margin-top: 1rem;
+    font-family: 'Roboto', Helvetica, sans-serif;
 }
 
 nav a {
