@@ -10,9 +10,11 @@
   --header-border: #979696;
   --footer-bg: #06172c;
   --shadow: rgba(0, 0, 0, 0.2);
+  --shadow-light: rgba(0, 0, 0, 0.25); /* ✅ NEW */
   --paragraph: #222222;
   --font-main: "Segoe UI", Tahoma, sans-serif;
 }
+
 
 /* RESET */
 * {
@@ -64,7 +66,6 @@ h1 {
   overflow: hidden;
 }
 
-
 /* HERO IMAGE */
 .hero-image {
   position: absolute;
@@ -84,8 +85,8 @@ h1 {
 /* CARD CONTAINER */
 .info-card {
   width: 280px;
-  background: rgba(255, 255, 255, 0.85);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  background: var(--card-bg);
+  box-shadow: 0 6px 18px var(--shadow);
   position: relative;
   border-radius: 2px;
   margin-left: 5%;
@@ -96,8 +97,8 @@ h1 {
 
 .info-card-weather {
   width: 280px;
-  background: rgba(255, 255, 255, 0.85);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  background: var(--card-bg);
+  box-shadow: 0 6px 18px var(--shadow);
   position: relative;
   border-radius: 2px;
   margin-right: 5%;
@@ -116,7 +117,7 @@ h1 {
   position: relative;
   left: -10px;
   width: calc(80% + 20px);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 2px 6px var(--shadow-light);
   margin-top: 10px;
 }
 
@@ -199,8 +200,6 @@ footer {
   }
 }
 
-
-
 /* =========================
    SMALL DEVICES (Phones)
    max-width: 600px
@@ -217,12 +216,11 @@ footer {
     height: 185px;
   }
 
-
   .card-body p {
     font-size: 1rem;
   }
 
-   .weather .card-header {
+  .weather .card-header {
     display: block;
     background: none;
     text-align: center;
@@ -231,9 +229,9 @@ footer {
   }
 
   .icon {
-  display: inline-block;
-  font-size: 1.8rem;
-}
+    display: inline-block;
+    font-size: 1.8rem;
+  }
 
   footer,
   .footer {
