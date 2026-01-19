@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A photo album showcasing various temples of the church of Jesus Christ of Latter-day Saints around the world.">
+    <meta name="author" content="Ani Ijeoma Jacinta">
+    <title>Federal Republic of Nigeria</title>
+
+    <!-- Mobile and Large Screen CSS -->
+    <link rel="stylesheet" href="styles/place.css">
+   
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- JavaScript -->
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <!-- Header section -->
+    <header class="header">Nigeria</header>
+
+    <!-- HERO SECTION -->
+
+    <main class="hero">
+        <!-- RESPONSIVE HERO IMAGE -->
+    <picture class="hero-image">
+      <!-- Large screens -->
+      <source
+        media="(min-width: 1024px)"
+        srcset="images/ayoola-salako.jpg"
+      />
+
+      <!-- Tablets -->
+      <source
+        media="(min-width: 600px)"
+        srcset="images/ayoola-salako.jpg"
+      />
+
+      <!-- Mobile -->
+      <img
+        src="images/ayoola-salako.jpg"
+        alt="Ayoola-Salako, Nigeria"
+        width="1200"
+        height="600"
+      />
+    </picture>
+
+    <!-- DATA CARD -->
+    <section class="info-card">
+  <div class="card-header">
+    <h2>Data</h2></div>
+  <div class="card-body">
+    <p><strong>Area:</strong> 923,768 sq km</p>
+    <p><strong>Population:</strong> 227,000,000+</p>
+    <p><strong>Capital:</strong> Abuja</p>
+    <p><strong>Languages:</strong> English</p>
+    <p><strong>Currency:</strong> Nigerian Naira (₦)</p>
+    <p><strong>Time Zone:</strong> UTC +1</p>
+    <p><strong>Calling Code:</strong> +234</p>
+    <p><strong>Internet TLD:</strong> .ng</p>
+  </div>
+</section>
+
+    <!-- WEATHER CARD -->
+    <section class="info-card-weather weather">
+  <div class="card-header">
+   <h2>Weather</h2>  <span class="icon">🌤️</span>
+  </div>
+  <div class="card-body">
+    <p><strong>Temperature:</strong> 28 °C</p>
+    <p><strong>Conditions:</strong> Partly Cloudy</p>
+    <p><strong>Wind:</strong> 10 km/h</p>
+    <p><strong>Humidity:</strong> 70%</p>
+  </div>
+</section>
+    </main>
+    <footer>
+    <p>&copy; <span id="year"></span> 🦋 Ani Ijeoma Jacinta 🦋 Nigeria</p>
+    <p>Last Modification: <span id="lastModified"></span></p>
+</footer>
+    
+</body>
+</html>

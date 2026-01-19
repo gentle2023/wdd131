@@ -1,0 +1,198 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+  background: #ffffff;
+  margin: 0 auto;
+}
+
+/* HEADER */
+.header {
+  background: #103f22;
+  color: #ffffff;
+  text-align: center;
+  padding: 1.2rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+  border-bottom: 8px solid #979696;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  height: 600px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0; 
+  align-items: stretch; 
+  overflow: hidden;
+}
+/* HERO IMAGE */
+.hero-image {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-image img {
+  display: block; 
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* CARD CONTAINER */
+.info-card {
+  width: 280px;
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  position: relative;
+  border-radius: 2px;
+  margin-left: 5%;
+  margin-top: 40px;   
+  margin-bottom: auto; 
+  align-self: flex-start; 
+}
+
+.info-card-weather {
+  width: 280px;
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  position: relative;
+  border-radius: 2px;
+  margin-right: 5%;
+  margin-bottom: 40px; 
+  margin-top: auto;    /* Pushes the card to the bottom */
+  align-self: flex-end;
+}
+
+/* CARD HEADER (GREEN BAR) */
+.card-header {
+  background: #045255;
+  color: #ffffff;
+  font-weight: 600;
+  padding: 0.6rem 0.8rem;
+  font-size: 1rem;
+  position: relative;
+  left: -10px;
+  width: calc(80% + 20px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  margin-top: 10px;
+}
+
+/* WEATHER HEADER VARIANT */
+.weather .card-header {
+  background: #1f7f4c;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* CARD BODY */
+.card-body {
+  padding: 0.9rem 1rem;
+}
+
+.card-body p {
+  font-size: 0.85rem;
+  color: #222;
+  margin-bottom: 0.35rem;
+  line-height: 1.4;
+}
+
+.card-body strong {
+  font-weight: 600;
+}
+
+/* ICON */
+.icon {
+  font-size: 1.2rem;
+}
+
+/* FOOTER */
+footer {
+  background-color: #06172c;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  font-size: 1rem;
+  font-family: 'Roboto', Helvetica, sans-serif;
+}
+
+/* =========================
+   MEDIUM DEVICES (Tablets)
+   max-width: 1024px
+========================= */
+@media (max-width: 1024px) {
+  .hero {
+    flex-direction: column;
+    height: auto;
+    padding-bottom: 2rem;
+  }
+
+  .hero-image {
+    position: relative;
+    width: 100%;
+    height: 350px;
+  }
+
+  .info-card,
+  .info-card-weather {
+    width: 90%;
+    max-width: 360px;
+    margin: 1.5rem auto 0 auto; 
+  }
+
+  .card-header {
+    background: #045255; 
+    color: #fff;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    display: block;
+  }
+}
+
+/* =========================
+   SMALL DEVICES (Phones)
+   max-width: 600px
+========================= */
+@media (max-width: 600px) {
+  .header {
+    font-size: 1.6rem;
+    padding: 0.8rem;
+  }
+
+  .hero-image {
+    height: 250px;
+  }
+
+  .weather .card-header {
+    display: block;    
+    text-align: center; 
+    width: 100%;       
+    left: 0;           
+    color: #ffffff;
+  }
+
+  .icon {
+    display: block;
+    margin-top: 5px;
+  }
+
+  .card-body p {
+    font-size: 0.85rem;
+  }
+
+  footer {
+    font-size: 0.85rem;
+    margin-top: 0; 
+  }
+}
