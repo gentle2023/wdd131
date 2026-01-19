@@ -206,7 +206,6 @@ footer {
   .card-header {
     background-color: var(--transparent);
     color: var(--paragraph);
-    box-shadow: none;
     left: 0;
     width: auto;
     text-align: center;
