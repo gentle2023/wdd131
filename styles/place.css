@@ -10,6 +10,7 @@
   --header-border: #979696;
   --footer-bg: #06172c;
   --shadow: rgba(0, 0, 0, 0.2);
+  --paragraph: #222222;
   --font-main: "Segoe UI", Tahoma, sans-serif;
 }
 
@@ -101,14 +102,14 @@ h1 {
   border-radius: 2px;
   margin-right: 5%;
   margin-bottom: 40px; 
-  margin-top: auto;    /* Pushes the card to the bottom */
+  margin-top: auto;    
   align-self: flex-end;
 }
 
 /* CARD HEADER (GREEN BAR) */
 .card-header {
-  background: #045255;
-  color: #ffffff;
+  background: var(--secondary-color);
+  color: var(--body-bg);
   font-weight: 600;
   padding: 0.6rem 0.8rem;
   font-size: 1rem;
@@ -121,7 +122,7 @@ h1 {
 
 /* WEATHER HEADER VARIANT */
 .weather .card-header {
-  background: #1f7f4c;
+  background: var(--accent-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -134,7 +135,7 @@ h1 {
 
 .card-body p {
   font-size: 0.85rem;
-  color: #222;
+  color: var(--paragraph);
   margin-bottom: 0.35rem;
   line-height: 1.4;
 }
@@ -150,7 +151,7 @@ h1 {
 
 /* FOOTER */
 footer {
-  background-color: #06172c;
+  background-color: var(--footer-bg);
   color: #fff;
   text-align: center;
   padding: 1rem;
@@ -186,7 +187,7 @@ footer {
 
   .card-header {
     background: transparent;
-    color: #333;          
+    color: var(--paragraph);          
     box-shadow: none;
     left: 0;
     width: auto;
