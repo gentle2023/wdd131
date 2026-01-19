@@ -1,25 +1,55 @@
+/*  ROOT VARIABLES */
+:root {
+  --primary-color: #103f22;
+  --secondary-color: #045255;
+  --accent-color: #1f7f4c;
+  --text-color-light: #ffffff;
+  --text-color-dark: #222222;
+  --body-bg: #ffffff;
+  --card-bg: rgba(255, 255, 255, 0.85);
+  --header-border: #979696;
+  --footer-bg: #06172c;
+  --shadow: rgba(0, 0, 0, 0.2);
+  --font-main: "Segoe UI", Tahoma, sans-serif;
+}
+
 /* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Segoe UI", Tahoma, sans-serif;
+  font-family: var(--font-main);
 }
 
 body {
-  background: #ffffff;
+  background: var(--body-bg);
   margin: 0 auto;
+}
+
+h1 {
+  font-size: 3rem;
 }
 
 /* HEADER */
 .header {
-  background: #103f22;
-  color: #ffffff;
+  background: var(--primary-color);
+  color: var(--text-color-light);
   text-align: center;
   padding: 1.2rem;
   font-size: 2.5rem;
   font-weight: bold;
-  border-bottom: 8px solid #979696;
+  border-bottom: 8px solid var(--header-border);
+  position: relative;
+}
+
+.header::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: var(--accent-color);
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
 }
 
 /* HERO */
@@ -32,6 +62,8 @@ body {
   align-items: stretch; 
   overflow: hidden;
 }
+
+
 /* HERO IMAGE */
 .hero-image {
   position: absolute;
