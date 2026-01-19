@@ -152,7 +152,7 @@ h1 {
 /* FOOTER */
 footer {
   background-color: var(--footer-bg);
-  color: #fff;
+  color: var(--body-bg);
   text-align: center;
   padding: 1rem;
   font-size: 1rem;
