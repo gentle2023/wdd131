@@ -114,6 +114,10 @@ main h1 {
     text-align: center;
 }
 
+.card h3 {
+    margin-left: 10px;
+}
+
 .card-content {
     display: flex;
     gap: 1rem;
