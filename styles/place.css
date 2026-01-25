@@ -154,18 +154,12 @@ h1 {
   font-weight: 600;
 }
 
-/* =========================
-   ICON
-========================= */
-.icon {
-  display: inline-flex;
-  align-items: center;
+.weather-icon {
+  width: 64px;
+  height: 64px;
 }
 
-.icon svg {
-  width: 32px;
-  height: 32px;
-}
+
 
 /* =========================
    FOOTER
@@ -214,6 +208,8 @@ footer {
   .card-body {
     text-align: center;
   }
+
+  
 }
 
 /* =========================
@@ -242,7 +238,11 @@ footer {
     width: 100%;
   }
 
-  .icon svg {
+  .weather-icon {
+    display: none;
+  }
+
+  .weather-icon-svg {
     width: 64px;
     height: 64px;
   }
