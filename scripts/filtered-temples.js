@@ -84,7 +84,7 @@ const temples = [
   },
     {
     templeName: "Salt Lake Temple",
-    location: "Salt Lake City, Utah, United States",
+    location: "Salt Lake City, United States",
     dedicated: "1896, April, 6",
     area: 35508,
     imageUrl:
