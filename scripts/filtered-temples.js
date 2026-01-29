@@ -91,7 +91,7 @@ const temples = [
       "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/salt-lake-city-utah/400x250/salt-lake-temple-37762.jpg"
   },
     {
-    templeName: "Hamilton, New Zealand Temple",
+    templeName: "Hamilton, New Zealand",
     location: "Hamilton, New Zealand",
     dedicated: "1958, April, 20-22",
     area: 4204,
