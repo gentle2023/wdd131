@@ -81,6 +81,22 @@ const temples = [
     area: 19184,
     imageUrl:
       "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/johannesburg-south-africa/400x250/johannesburg-south-africa-temple-lds-83166-wallpaper.jpg"
+  },
+    {
+    templeName: "Salt Lake Temple",
+    location: "Salt Lake City, Utah, United States",
+    dedicated: "1896, April, 6",
+    area: 35508,
+    imageUrl:
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/salt-lake-city-utah/400x250/salt-lake-temple-37762.jpg"
+  },
+    {
+    templeName: "Hamilton, New Zealand Temple",
+    location: "Hamilton, New Zealand",
+    dedicated: "1958, April, 20-22",
+    area: 4204,
+    imageUrl:
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/hamilton-new-zealand/800x500/hamilton_new_zealand_temple_lds.jpg"
   }
 ];
 
