@@ -72,9 +72,13 @@ nav a {
 
 nav a:hover { 
     color:#d2691e;
-    
-    
 }
+
+nav a.active {
+    color: #d2691e;
+    font-weight: 600;
+}
+
 
 /* Main */
 main {

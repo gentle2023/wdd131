@@ -7,23 +7,42 @@ document.getElementById("lastModified").innerHTML =
     "Last Modified: " + document.lastModified;
 
 
-// Optional JS enhancement for fade-in when the image actually enters viewport
-const images = document.querySelectorAll('.fade-img');
 
-const observer = new IntersectionObserver((entries, observer) => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting) {
-      const img = entry.target;
-      img.src = img.dataset.src; 
-      img.style.opacity = 1; 
-      observer.unobserve(img); 
-    }
-  });
-}, {
-  rootMargin: '0px 0px 50px 0px',
-  threshold: 0.1
-});
+// Select all images with the data-src attribute
+const imagesToLoad = document.querySelectorAll("img[data-src]");
 
-images.forEach(img => {
-  observer.observe(img);
-});
+
+const imgOptions = {
+    threshold: 0.1, 
+    rootMargin: "0px 0px 200px 0px" 
+};
+
+const loadImages = (image) => {
+    const src = image.getAttribute("data-src");
+    if (!src) return;
+
+    image.src = src;
+    image.onload = () => {
+        image.classList.add("loaded"); 
+    };
+};
+
+
+if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver((items, observer) => {
+        items.forEach((item) => {
+            if (item.isIntersecting) {
+                loadImages(item.target);
+                observer.unobserve(item.target);
+            }
+        });
+    }, imgOptions);
+
+    imagesToLoad.forEach((img) => {
+        observer.observe(img);
+    });
+} else {
+    imagesToLoad.forEach((img) => {
+        loadImages(img);
+    });
+}

@@ -82,7 +82,7 @@ const temples = [
     imageUrl:
       "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/johannesburg-south-africa/400x250/johannesburg-south-africa-temple-lds-83166-wallpaper.jpg"
   },
-    {
+  {
     templeName: "Salt Lake Temple",
     location: "Salt Lake City, United States",
     dedicated: "1896, April, 6",
@@ -90,7 +90,7 @@ const temples = [
     imageUrl:
       "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/salt-lake-city-utah/400x250/salt-lake-temple-37762.jpg"
   },
-    {
+  {
     templeName: "Hamilton, New Zealand",
     location: "Hamilton, New Zealand",
     dedicated: "1958, April, 20-22",
@@ -106,12 +106,12 @@ const temples = [
 const templesElement = document.querySelector("#temples");
 
 // ===============================
-// Display Function
+// Display Temples Function
 // ===============================
 function displayTemples(templeList) {
   templesElement.innerHTML = "";
 
-  templeList.forEach(temple => {
+  templeList.forEach((temple) => {
     const card = document.createElement("section");
     const name = document.createElement("h3");
     const location = document.createElement("p");
@@ -124,9 +124,12 @@ function displayTemples(templeList) {
     dedicated.textContent = `Dedicated: ${temple.dedicated}`;
     area.textContent = `Area: ${temple.area.toLocaleString()} sq ft`;
 
+    // Native lazy loading
     image.src = temple.imageUrl;
     image.alt = temple.templeName;
     image.loading = "lazy";
+    image.width = 400;
+    image.height = 250;
 
     card.appendChild(name);
     card.appendChild(location);
@@ -155,34 +158,22 @@ document.querySelector("#home").addEventListener("click", (e) => {
 
 document.querySelector("#old").addEventListener("click", (e) => {
   e.preventDefault();
-  const oldTemples = temples.filter(
-    temple => getYear(temple.dedicated) < 1900
-  );
-  displayTemples(oldTemples);
+  displayTemples(temples.filter(t => getYear(t.dedicated) < 1900));
 });
 
 document.querySelector("#new").addEventListener("click", (e) => {
   e.preventDefault();
-  const newTemples = temples.filter(
-    temple => getYear(temple.dedicated) > 2000
-  );
-  displayTemples(newTemples);
+  displayTemples(temples.filter(t => getYear(t.dedicated) > 2000));
 });
 
 document.querySelector("#large").addEventListener("click", (e) => {
   e.preventDefault();
-  const largeTemples = temples.filter(
-    temple => temple.area > 90000
-  );
-  displayTemples(largeTemples);
+  displayTemples(temples.filter(t => t.area > 90000));
 });
 
 document.querySelector("#small").addEventListener("click", (e) => {
   e.preventDefault();
-  const smallTemples = temples.filter(
-    temple => temple.area < 10000
-  );
-  displayTemples(smallTemples);
+  displayTemples(temples.filter(t => t.area < 10000));
 });
 
 // ===============================
@@ -190,26 +181,29 @@ document.querySelector("#small").addEventListener("click", (e) => {
 // ===============================
 displayTemples(temples);
 
+// ===============================
+// Footer Dates
+// ===============================
+document.querySelector("#year").textContent = new Date().getFullYear();
+document.querySelector("#lastModified").textContent = document.lastModified;
 
-// Footer: current year and last modified date
-const yearSpan = document.querySelector("#year");
-const lastModifiedSpan = document.querySelector("#lastModified");
-
-const currentYear = new Date().getFullYear();
-yearSpan.textContent = currentYear;
-
-lastModifiedSpan.textContent = document.lastModified;
-
-// Hamburger menu
+// ===============================
+// Hamburger Menu
+// ===============================
 const hamburgerBtn = document.querySelector("#hamburger");
 const navMenu = document.querySelector("nav");
 
 hamburgerBtn.addEventListener("click", () => {
-    navMenu.classList.toggle("open");
+  navMenu.classList.toggle("open");
+  hamburgerBtn.textContent = hamburgerBtn.textContent === "☰" ? "✖" : "☰";
+});
 
-    if (hamburgerBtn.textContent === "☰") {
-        hamburgerBtn.textContent = "✖";
-    } else {
-        hamburgerBtn.textContent = "☰";
-    }
+
+const navLinks = document.querySelectorAll("nav a");
+
+navLinks.forEach(link => {
+  link.addEventListener("click", () => {
+    navLinks.forEach(l => l.classList.remove("active"));
+    link.classList.add("active");
+  });
 });
