@@ -1,0 +1,98 @@
+/* ================================
+   Site Plan Stylesheet
+   ================================ */
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Open+Sans:wght@400;600&display=swap');
+
+
+:root {
+    --primary-color: #070d20;   
+    --secondary-color: #c57e22; 
+    --background-color: #F8FAFC;
+    --text-color: #1F2933;
+    --border-color: #CBD5E1;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+}
+
+/* Main Content */
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+/* Sections */
+section {
+    background-color: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Headings */
+h2 {
+    font-family: 'Poppins', sans-serif;
+    color: var(--primary-color);
+    margin-top: 0;
+}
+
+p {
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h3 {
+    font-family: 'Poppins', sans-serif;
+    color: var(--secondary-color);
+}
+
+/* Lists */
+ul {
+    padding-left: 1.2rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+/* Accents */
+strong {
+    color: var(--secondary-color);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    font-size: 0.9rem;
+}

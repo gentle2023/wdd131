@@ -1,0 +1,249 @@
+/* =========================
+   ROOT VARIABLES
+========================= */
+:root {
+  /* Colors */
+  --bg-dark: #060b10;
+  --bg-light: #0f2a33;
+  --primary: #1fa3e0;
+  --text-main: #e5f1f7;
+  --text-muted: #b8c7cf;
+  --nav-text: #cbd5db;
+  --nav-bg: #242424;
+  --footer-bg: #242424;
+  --active-color: #F3A712;
+
+  /* Buttons */
+  --btn-radius: 30px;
+
+  /* Cards & effects */
+  --card-bg: rgba(12, 26, 32, 0.9);
+  --shadow-lg: 0 20px 60px rgba(0,0,0,0.6);
+  --shadow-sm: 0 10px 25px rgba(0,0,0,0.5);
+
+  /* Spacing */
+  --container-padding: 80px;
+}
+
+/* =========================
+   GLOBAL STYLES
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top, var(--bg-light), var(--bg-dark));
+  color: var(--text-main);
+  min-height: 100vh;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--nav-bg);
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.navbar nav a {
+  margin: 0 12px;
+  text-decoration: none;
+  color: var(--nav-text);
+  font-size: 18px;
+}
+
+.navbar nav a.active {
+  color: var(--active-color);
+  padding-bottom: 5px;
+}
+
+.socials {
+  display: flex;
+  gap: 1rem;
+}
+
+.socials a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #fff;
+  font-weight: bold;
+}
+
+.socials a:hover {
+  color: #0077b5; 
+}
+
+
+/* =========================
+   HERO SECTION
+========================= */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--container-padding);
+}
+
+/* LEFT CONTENT */
+.hero-text {
+  max-width: 520px;
+}
+
+.hero-text h1 {
+  font-size: 52px;
+  line-height: 1.2;
+}
+
+.hero-text h1 span {
+  color: var(--primary);
+}
+
+.hero-text h3 {
+  margin: 20px 0;
+  font-weight: 400;
+}
+
+.accent {
+  color: var(--primary);
+}
+
+.hero-text p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text-muted);
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.buttons {
+  margin-top: 30px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: var(--btn-radius);
+  text-decoration: none;
+  font-size: 14px;
+  margin-right: 15px;
+}
+
+.btn.primary {
+  background: var(--primary);
+  color: #fff;
+}
+
+.btn.outline {
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
+
+/* =========================
+   HERO IMAGE
+========================= */
+.hero-image {
+  position: relative;
+}
+
+.hero-image img {
+  width: 420px;
+  border-radius: 18px;
+  box-shadow: var(--shadow-lg);
+}
+
+/* =========================
+   FLOATING BADGES
+========================= */
+.badge {
+  position: absolute;
+  background: var(--card-bg);
+  padding: 12px 18px;
+  border-radius: 12px;
+  font-size: 14px;
+  color: var(--text-main);
+  box-shadow: var(--shadow-sm);
+}
+
+.badge.design {
+  top: 40px;
+  right: -40px;
+}
+
+.badge.code {
+  bottom: 120px;
+  left: -40px;
+}
+
+.badge.ideas {
+  bottom: 30px;
+  right: -30px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer {
+  display: flex;
+  background-color: var(--footer-bg);
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px var(--container-padding);
+  border-top: 1px solid #777;
+  margin-top: 60px;
+}
+
+.footer p {
+  font-size: 15px;
+  color: var(--text-muted);
+}
+
+.footer-socials {
+  display: flex;
+  gap: 16px;
+}
+
+.footer-socials a {
+  text-decoration: none;
+  color: var(--nav-text);
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.footer-socials a:hover {
+  color: var(--primary);
+}
+
+/* =========================
+   FOOTER SOCIAL ICON IMAGES
+========================= */
+.footer-socials img {
+  width: 24px;
+  height: 24px;
+  opacity: 0.8;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.footer-socials a:hover img {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+.last-modified {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-left: 6px;
+}

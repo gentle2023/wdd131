@@ -207,3 +207,5 @@ navLinks.forEach(link => {
     link.classList.add("active");
   });
 });
+
+document.querySelector("#home").classList.add("active");
