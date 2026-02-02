@@ -1,0 +1,63 @@
+/* Reset some defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+main {
+  padding: 2rem;
+}
+
+
+img {
+  display: block;
+  margin: 2rem auto;
+  width: 400px;
+  height: 600px;
+  object-fit: cover;
+  opacity: 0;
+  animation: fadeIn 15s forwards; 
+}
+
+
+/* The initial look (placeholder) */
+.fade-img {
+    opacity: 0.6;
+    filter: blur(5px);
+    transition: filter 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    background-color: #eee; 
+}
+
+.fade-img.loaded {
+    opacity: 1;
+    filter: blur(0);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    filter: brightness(0%);
+  }
+  to {
+    opacity: 1;
+    filter: brightness(100%);
+  }
+}
+
+footer {
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: #222;
+  color: #fff;
+}
+
+.lastmodified {
+  margin-top: 5px;
+}
