@@ -1,0 +1,330 @@
+/* =========================
+   ROOT VARIABLES
+========================= */
+:root {
+  /* COLORS */
+  --color-bg-body: #ffffff;
+  --color-bg-header: #040F0F;
+  --color-bg-form: #d1ccd1;
+  --color-bg-footer: #040F0F;
+  --color-bg-button: #231B1B;
+  --color-bg-button-hover: #454B66;
+
+  --color-text-main: #000000;
+  --color-text-light: #ffffff;
+  --color-text-optional: #330eb8;
+  --color-text-accent: #330033;
+  --color-text-counter: #00008b;
+
+  --color-border-main: #777777;
+  --color-border-input: #cccccc;
+  --text-color: #ffffff;
+
+  /* TYPOGRAPHY */
+  --font-main: 'Roboto', sans-serif;
+  --font-size-base: 1rem;
+  --font-size-sm: 0.9rem;
+  --font-size-lg: 1.4rem;
+  --font-size-xl: 1.8rem;
+
+  /* SPACING */
+  --space-xs: 0.4rem;
+  --space-sm: 0.8rem;
+  --space-md: 1.2rem;
+  --space-lg: 2rem;
+
+  /* RADIUS */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+
+  /* SHADOW */
+  --shadow-card: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* =========================
+   GLOBAL
+========================= */
+body {
+  background-color: var(--color-bg-body);
+  font-family: var(--font-main);
+  margin: 0;
+  color: var(--color-text-main);
+}
+
+/* =========================
+   HEADER
+========================= */
+header {
+  background-color: var(--color-bg-header);
+  color: var(--color-text-light);
+  text-align: center;
+  padding: var(--space-md);
+}
+
+/* =========================
+   MAIN
+========================= */
+main {
+  padding: var(--space-md);
+}
+
+/* =========================
+   FORM
+========================= */
+.review-form {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-bg-form);
+  max-width: 600px;
+  margin: 0 auto;
+  padding: var(--space-lg);
+  border: 2px solid var(--color-border-main);
+}
+
+#product-name {
+  font-size: 0.9rem;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin: var(--space-md) 0 var(--space-xs);
+}
+
+.optional {
+  color: var(--color-text-optional);
+  font-weight: normal;
+  font-size: var(--font-size-sm);
+}
+
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+  padding: var(--space-sm);
+  border: 1px solid var(--color-border-input);
+  border-radius: var(--radius-sm);
+  width: 100%;
+  box-sizing: border-box;
+  font-size: var(--font-size-base);
+}
+
+textarea {
+  height: 120px;
+}
+
+/* =========================
+   FIELDSETS
+========================= */
+fieldset {
+  border: none;
+  padding: 0;
+  margin-top: var(--space-md);
+}
+
+legend {
+  font-weight: bold;
+}
+
+/* =========================
+   STAR RATING
+========================= */
+.star-rating {
+  display: flex;
+  justify-content: space-around;
+  padding: var(--space-md) 0;
+  text-align: center;
+}
+
+.star-rating label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+/* =========================
+   CHECKBOX GROUP
+========================= */
+.checkbox-group label {
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: var(--space-sm) 0;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  width: 20px;
+  height: 20px;
+}
+
+/* =========================
+   BUTTON
+========================= */
+.submit-btn {
+  margin-top: var(--space-lg);
+  padding: var(--space-md);
+  background-color: var(--color-bg-button);
+  border: 1px solid var(--color-border-main);
+  font-size: var(--font-size-lg);
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  color: var(--text-color);
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: var(--color-bg-button-hover);
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer {
+  background-color: var(--color-bg-footer);
+  color: var(--color-text-light);
+  text-align: center;
+  padding: var(--space-lg);
+  margin-top: var(--space-lg);
+}
+
+/* =========================
+   CONFIRMATION MESSAGE
+========================= */
+.confirmation-message {
+  text-align: center;
+  background-color: var(--color-bg-body);
+  padding: var(--space-lg);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  margin: var(--space-lg) auto;
+  max-width: 400px;
+}
+
+.confirmation-message h2 {
+  color: var(--color-text-accent);
+  margin-top: 0;
+}
+
+.counter-display {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--color-text-counter);
+  margin: var(--space-md) 0;
+}
+
+/* =========================
+   PRIMARY BUTTON LINK
+========================= */
+.btn.primary {
+  display: inline-block;
+  background-color: var(--color-text-accent);
+  color: var(--color-text-light);
+  padding: var(--space-sm) var(--space-lg);
+  text-decoration: none;
+  border-radius: var(--radius-sm);
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn.primary:hover {
+  background-color: #550055;
+}
+
+
+@media (max-width: 480px) {
+  header {
+    padding: 0.8rem;
+    font-size: 0.95rem;
+  }
+
+  main {
+    padding: 1rem;
+  }
+
+  .review-form {
+    padding: 1.2rem;
+    border-width: 1px;
+  }
+
+  label {
+    margin-top: 1rem;
+    font-size: 0.95rem;
+  }
+
+  .optional {
+    font-size: 0.85rem;
+  }
+
+  input[type="text"],
+  input[type="date"],
+  select,
+  textarea {
+    padding: 0.7rem;
+    font-size: 0.95rem;
+  }
+
+  textarea {
+    height: 100px;
+  }
+
+  .star-rating {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .star-rating label {
+    font-size: 1.1rem;
+  }
+
+  input[type="checkbox"],
+  input[type="radio"] {
+    width: 18px;
+    height: 18px;
+  }
+
+  .submit-btn {
+    font-size: 1.2rem;
+    padding: 0.9rem;
+  }
+
+  .footer {
+    font-size: 0.9rem;
+    padding: 1.2rem;
+  }
+
+  .confirmation-message {
+    margin: 1.5rem 1rem;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .review-form {
+    max-width: 90%;
+    padding: 1.5rem;
+  }
+
+  .star-rating {
+    justify-content: space-between;
+  }
+
+  .submit-btn {
+    font-size: 1.3rem;
+  }
+
+  .confirmation-message {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .review-form {
+    max-width: 85%;
+  }
+}
+
