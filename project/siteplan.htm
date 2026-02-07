@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/siteplan.css">
-    <title>Document</title>
+    <title>Website Site Plan</title>
 </head>
 <body>
     <header>
@@ -15,7 +15,7 @@
 
     <section>
         <h2>Site Name</h2>
-        <p><strong>Site Name:</strong> Ijeoma Web Development Learning Journey</p>
+        <p><strong>Site Name:</strong> Ijeoma Web Dev</p>
         <p>
             This site name was chosen because the website documents my personal growth
             as a web development student. It clearly communicates that the site is a
@@ -47,23 +47,39 @@
         </ul>
     </section>
 
-    <section>
-        <h2>Color Schema</h2>
-        <ul>
-            <li>
-                <strong>Primary Color:</strong> #1E40AF – Used for headings, navigation,
-                and section titles.
-            </li>
-            <li>
-                <strong>Secondary Color:</strong> #22C55E – Used for buttons, links,
-                and interactive highlights.
-            </li>
-            <li>
-                <strong>Background Color:</strong> #F8FAFC – Used for the main page
-                background to maintain readability and accessibility.
-            </li>
-        </ul>
-    </section>
+    <section class="color-schema">
+    <h2>Color Schema</h2>
+    <ul class="schema-list">
+        <li>
+            <div class="swatch" style="background-color: #1FA3E0;"></div>
+            <div class="schema-info">
+                <strong>Primary Color:</strong> <span class="color-code">#1FA3E0</span> 
+                <p>Used for buttons, branding, and major visual highlights.</p>
+            </div>
+        </li>
+        <li>
+            <div class="swatch" style="background-color: #F3A712;"></div>
+            <div class="schema-info">
+                <strong>Active/Secondary Color:</strong> <span class="color-code">#F3A712</span>
+                <p>Used for active navigation links and interactive emphasis.</p>
+            </div>
+        </li>
+        <li>
+            <div class="swatch" style="background: radial-gradient(#0F2A33, #060B10);"></div>
+            <div class="schema-info">
+                <strong>Background Colors:</strong> <span class="color-code">#060B10</span> to <span class="color-code">#0F2A33</span>
+                <p>A dark radial gradient used to provide depth and modern contrast.</p>
+            </div>
+        </li>
+        <li>
+            <div class="swatch" style="background-color: #FFFFFF; border: 1px solid #ccc;"></div>
+            <div class="schema-info">
+                <strong>Text Color:</strong> <span class="color-code">#FFFFFF</span> (Main) and <span class="color-code">#E5F1F7</span> (Paragraphs)
+                <p>Chosen for high readability against the dark background.</p>
+            </div>
+        </li>
+    </ul>
+</section>
 
     <section>
         <h2>Typography</h2>
@@ -79,32 +95,19 @@
         </ul>
     </section>
 
-    <section>
-        <h2>Wireframe</h2>
+    <section class="wireframes">
+  <h2>Wireframes</h2>
 
-        <h3>Mobile View</h3>
-        <p>
-            Header with site title<br>
-            Navigation menu (hamburger menu)<br>
-            About Me section<br>
-            Skills section<br>
-            Projects section<br>
-            Resources section<br>
-            Contact / Feedback form<br>
-            Footer with references
-        </p>
+  <div class="wireframe-item">
+    <h3>Mobile View</h3>
+    <img src="images/mobile-view.png" alt="Mobile View Wireframe showing stacked layout and hamburger menu" class="wireframe-img">
+  </div>
 
-        <h3>Desktop View</h3>
-        <p>
-            Header with site title and horizontal navigation<br>
-            Hero / About Me section<br>
-            Skills section displayed in columns<br>
-            Projects section with project cards<br>
-            Resources section with links<br>
-            Contact / Feedback form<br>
-            Footer with references and copyright
-        </p>
-    </section>
+  <div class="wireframe-item">
+    <h3>Desktop View</h3>
+    <img src="images/Desktop View.png" alt="Desktop View Wireframe showing horizontal navigation and grid columns" class="wireframe-img">
+  </div>
+</section>
 
 </main>
 

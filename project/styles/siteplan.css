@@ -96,3 +96,94 @@ footer {
     color: #ffffff;
     font-size: 0.9rem;
 }
+
+.wireframe-img {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #444;
+  margin: 20px 0;
+  box-shadow: var(--shadow-sm);
+}
+
+.wireframe-item {
+  margin-bottom: 40px;
+}
+
+@media (min-width: 769px) {
+  .wireframes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.color-schema {
+    padding: 2rem;
+    background-color: var(--bg-card); /* Keeps it consistent with your theme */
+    border-radius: var(--radius);
+    margin-top: 2rem;
+}
+
+.schema-list {
+    list-style: none;
+    padding: 0;
+}
+
+.schema-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.schema-list li:last-child {
+    border-bottom: none;
+}
+
+/* The color preview box */
+.swatch {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    flex-shrink: 0; /* Prevents swatch from squishing on mobile */
+    box-shadow: var(--shadow-sm);
+}
+
+.schema-info strong {
+    color: var(--primary);
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 1.1rem;
+}
+
+.color-code {
+    font-family: 'Courier New', Courier, monospace;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2px 8px;
+    border-radius: 4px;
+    color: var(--active-color);
+    font-weight: bold;
+}
+
+.schema-info p {
+    margin: 5px 0 0 0;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    .schema-list li {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .swatch {
+        width: 100%;
+        height: 30px;
+    }
+}

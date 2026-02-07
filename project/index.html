@@ -3,58 +3,46 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>IJEOMA Web Dev</title>
+  <title>Ijeoma | Web Developer</title>
   <link rel="stylesheet" href="styles/base.css" />
-   <script src="scripts/main.js" defer></script>
+  <script src="scripts/main.js" defer></script>
 </head>
 <body>
-  <!-- NAVBAR -->
   <header class="navbar">
     <div class="logo">IJ Web Dev</div>
 
-    <nav>
-      <a class="active" href="#">Home</a>
-      <a href="#">About Me</a>
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <nav id="nav-menu">
+      <a class="active" href="index.html">Home</a>
+      <a href="about.html">About Me</a>
       <a href="#">Projects</a>
       <a href="#">Resources</a>
       <a href="#">References</a>
       <a href="#">Contact Me</a>
     </nav>
+  </header>
 
-    <div class="socials">
-  <a href="https://twitter.com" target="_blank" aria-label="X (Twitter)">X</a>
-  <a href="https://facebook.com" target="_blank" aria-label="Facebook">f</a>
-  <a href="https://instagram.com" target="_blank" aria-label="Instagram">◎</a>
-  <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">in</a>
-</div>
-</header>
-
-  <!-- HERO -->
   <section class="hero">
-    <!-- LEFT -->
     <div class="hero-text">
       <h1>Hello, I'm <span> <br>Ijeoma Ani</span></h1>
       <h3>Creative <span class="accent">Web Developer</span></h3>
-
       <p>
         I’m a web development student passionate about building clean, responsive, and user-friendly websites. 
-        This site showcases my learning journey in Web Development and Design, specifically in WDD 131, using HTML, CSS and JavaScript.
-        Here you will find my hands-on projects, and the skills I’m developing as I grow 
-        into a professional web developer. Through each project, I focus on good design principles, accessibility,
-         and writing clean, maintainable code. As I continue learning and improving, my goal is to build websites 
-         that not only look great but also provide meaningful and engaging user experiences.
+        This site showcases my learning journey in Web Development and Design (WDD 131).
       </p>
-
       <div class="buttons">
         <a href="#" class="btn primary">View My Work</a>
         <a href="#" class="btn outline">Get In Touch</a>
       </div>
     </div>
 
-    <!-- RIGHT -->
     <div class="hero-image">
-      <img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12" alt="Profile">
-
+      <img src="images/ijeoma.jpeg" alt="Ijeoma Profile Image">
       <div class="badge design">🎨 Design</div>
       <div class="badge code">&lt;/&gt; Code</div>
       <div class="badge ideas">💡 Ideas</div>
@@ -62,21 +50,16 @@
   </section>
 
   <footer class="footer">
-  <p> <span id="currentyear"></span>
-    © 2026 Ijeoma Ani. All Rights Reserved.
-    <span class="last-modified">
-    <span id="lastModified"></span>
-    </span>
-  </p>
-
-  <div class="footer-socials">
-    <a href="#"><img src="images/twitter.png" alt="Twitter" /></a>
-    <a href="#"><img src="images/facebook.png" alt="Facebook" /></a>
-    <a href="#"><img src="images/instagram.png" alt="Instagram" /></a>
-    <a href="#"><img src="images/linkedin.png" alt="LinkedIn" /></a>
-  </div>
-</footer>
-
-
+    <p>
+      &copy; <span id="currentyear"></span> Ijeoma Ani. All Rights Reserved.
+      <span class="last-modified" id="lastModified"></span>
+    </p>
+    <div class="footer-socials">
+      <a href="#"><img src="images/twitter.png" alt="Twitter" /></a>
+      <a href="#"><img src="images/facebook.png" alt="Facebook" /></a>
+      <a href="#"><img src="images/instagram.png" alt="Instagram" /></a>
+      <a href="#"><img src="images/linkedin.png" alt="LinkedIn" /></a>
+    </div>
+  </footer>
 </body>
 </html>
