@@ -1,33 +1,39 @@
 const projects = [
   {
     title: "Responsive Landing Page",
-    image: "images/project1.webp",
-    description: "A mobile-first landing page using HTML and CSS."
+    image: "images/web1.png",
+    description: "A mobile-first landing page of my Journey in WDD 131 using HTML and CSS.",
+    url: "https://gentle2023.github.io/wdd131/"
   },
   {
     title: "A responsive Country Page",
-    image: "images/project2.webp",
-    description: "A responsive country information page."
+    image: "images/web3.png",
+    description: "A responsive country information page showing information about Abuja and Weather Data.",
+    url: "https://gentle2023.github.io/wdd131/place.html"
   },
   {
     title: "A page showing favourite Temples",
-    image: "images/project3.webp",
-    description: "A dynamic portal using localStorage."
+    image: "images/web2.png",
+    description: "A dynamic Website showing favourite Temples of the Church of Jesus Christ of Latter-day Saints.",
+    url: "https://gentle2023.github.io/wdd131/filtered-temples.html"
   },
   {
     title: "A Rafting Company Website",
-    image: "images/project4.webp",
-    description: "A responsive website for a rafting company."
+    image: "images/web5.png",
+    description: "A responsive website for a rafting company.",
+    url: "https://gentle2023.github.io/wdd130/wwr/"
   },
   {
     title: "A page showing favourite Temples",
-    image: "images/project5.webp",
-    description: "A dynamic portal using localStorage."
+    image: "images/web6.png",
+    description: "A dynamic portal using localStorage.",
+    url: "https://example.com/temples-2"
   },
   {
     title: "A Product Review Page",
-    image: "images/project6.webp",
-    description: "A dynamic portal using localStorage."
+    image: "images/web4.png",
+    description: "A dynamic Product Review page using localStorage.",
+    url: "https://gentle2023.github.io/wdd131/form.html"
   }
 ];
 
@@ -38,14 +44,18 @@ function displayProjects() {
 
   container.innerHTML = projects.map(project => `
     <article class="project-card">
-      <img 
-        src="${project.image}" 
-        alt="${project.title}" 
-        loading="lazy">
-      <div>
-        <h2>${project.title}</h2>
-        <p>${project.description}</p>
-      </div>
+      <a href="${project.url}" target="_blank" rel="noopener noreferrer">
+        <img 
+          src="${project.image}" 
+          alt="${project.title}" 
+          loading="lazy">
+
+        <div class="project-content">
+          <h2>${project.title}</h2>
+          <p>${project.description}</p>
+          <span class="project-link">View Project →</span>
+        </div>
+      </a>
     </article>
   `).join("");
 }
@@ -79,3 +89,15 @@ function handleForm() {
 // Initialize page features
 displayProjects();
 handleForm();
+
+  // Handle Footer Dates
+  const yearElement = document.getElementById('currentyear');
+  const lastModifiedElement = document.getElementById('lastModified');
+
+  if (yearElement) {
+    yearElement.textContent = new Date().getFullYear();
+  }
+
+  if (lastModifiedElement) {
+    lastModifiedElement.textContent = `Last Modified: ${document.lastModified}`;
+  }
